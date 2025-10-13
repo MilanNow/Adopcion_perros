@@ -3,7 +3,7 @@
 /* ---------- VARIABLES GLOBALES ---------- */
 :root {
     --primary-blue: #005606;          /* Verde oscuro principal (color institucional o dominante) */
-    --accent: #00ff4c;                /* Color de acento brillante para botones o enlaces */
+    --accent: #00ff1a;                /* Color de acento brillante para botones o enlaces */
     --light-bg: #ffffff;              /* Fondo claro predeterminado (blanco) */
     --text-color: #000000;            /* Color base del texto (negro) */
     --radius: 18px;                   /* Radio de borde para esquinas redondeadas */
@@ -118,7 +118,7 @@ button, .btn {
     transition:all 0.3s ease;         
 }
 button:hover, .btn:hover {
-    background:#00ff0d;               
+    background:#62ff6a;               
     transform: scale(1.05);           
 }
 
