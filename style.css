@@ -1,17 +1,14 @@
-/* AdoptPet CSS - Profesional y Extenso */
-
-/* ---------- VARIABLES GLOBALES ---------- */
 :root {
-    --primary-blue: #005606;          /* Verde oscuro principal (color institucional o dominante) */
-    --accent: #00ff1a;                /* Color de acento brillante para botones o enlaces */
-    --light-bg: #ffffff;              /* Fondo claro predeterminado (blanco) */
-    --text-color: #000000;            /* Color base del texto (negro) */
-    --radius: 18px;                   /* Radio de borde para esquinas redondeadas */
-    --max-w: 1280px;                  /* Ancho máximo de secciones o contenedores */
-    --shadow: 0 8px 24px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+    --primary-blue: #005606;          
+    --accent: #00ff1a;                
+    --light-bg: #ffffff;             
+    --text-color: #000000;            
+    --radius: 18px;                   
+    --max-w: 1280px;                 
+    --shadow: 0 8px 24px rgba(0,0,0,0.1); 
 }
 
-/* ---------- RESETEO DE ESTILOS ---------- */
+
 * { 
     margin:0;                         
     padding:0;                        
@@ -30,7 +27,7 @@ img {
     border-radius: var(--radius);     
 }
 
-/* ---------- ENCABEZADO (HEADER) ---------- */
+
 header {
     background: var(--primary-blue);  
     color:white;                      
@@ -61,7 +58,7 @@ header nav a:hover {
     color: var(--accent);             
 }
 
-/* ---------- SECCIÓN HERO (PORTADA) ---------- */
+
 .hero {
     background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20221009/pngtree-beagle-dogs-horizontal-young-animal-photo-image_1228838.jpg');
     background-size: cover;           
@@ -78,7 +75,7 @@ header nav a:hover {
     font-size:1.8em;                  
 }
 
-/* ---------- SECCIONES GENERALES ---------- */
+
 .section {
     margin:60px auto;                 
     padding:60px 20px;                
@@ -87,17 +84,17 @@ header nav a:hover {
 }
 
 .section.alt { 
-    background: #cbf0c5;              
+    background: #cbf0c5; 
 }
 
-/* Titulos uniformes para todas las secciones */
+
 .section h2 { 
     font-size: 2.5em;                 
     color: var(--primary-blue);       
     margin-bottom: 25px;              
 }
 
-/* Texto uniforme para párrafos y listas */
+
 .section p, .section ul, .section ol { 
     font-size: 1.2em;                 
     margin-bottom: 15px;              
@@ -105,7 +102,7 @@ header nav a:hover {
     line-height: 1.5em;               
 }
 
-/* ---------- BOTONES ---------- */
+
 button, .btn {
     background: var(--accent);        
     color:rgb(0, 0, 0);               
@@ -122,7 +119,7 @@ button:hover, .btn:hover {
     transform: scale(1.05);           
 }
 
-/* ---------- SECCIÓN DE PERROS ---------- */
+
 .dog-section {
     display:flex;                     
     flex-wrap:wrap;                   
@@ -146,7 +143,7 @@ button:hover, .btn:hover {
     margin-bottom:12px;               
 }
 
-/* ---------- GALERÍA DE PERROS ---------- */
+
 .dog-gallery {
     display:flex;                     
     flex-wrap:wrap;                   
@@ -155,7 +152,7 @@ button:hover, .btn:hover {
     margin-bottom:30px;               
 }
 
-/* ---------- PIE DE PÁGINA ---------- */
+
 footer {
     background: var(--primary-blue);  
     color:white;                      
@@ -171,3 +168,4 @@ footer a {
 footer a:hover { 
     text-decoration:underline;        
 }
+

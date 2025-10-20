@@ -5,14 +5,11 @@ import os
 import threading
 import time
 
-# -------------------------------
-# CONFIGURACIÓN DEL SERVIDOR
-# -------------------------------
-PORT = 8000
-DIRECTORIO = os.path.dirname(os.path.abspath(__file__))  # Ruta actual
-os.chdir(DIRECTORIO)  # Cambia el directorio de trabajo al actual
 
-# Manejador personalizado para mostrar logs de acceso
+PORT = 8000
+DIRECTORIO = os.path.dirname(os.path.abspath(__file__))  
+os.chdir(DIRECTORIO) 
+
 class CustomHandler(http.server.SimpleHTTPRequestHandler):
     def log_message(self, format, *args):
         """Sobrescribe la función original para mostrar logs más bonitos"""
@@ -26,18 +23,14 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
         else:
             super().do_GET()
 
-# -------------------------------
-# FUNCIÓN PARA ABRIR EL NAVEGADOR
-# -------------------------------
+
 def abrir_navegador():
-    time.sleep(1)  # Espera un segundo a que el servidor esté listo
+    time.sleep(1) 
     url = f"http://localhost:{PORT}/index.html"
     print(f"[🌐] Abriendo {url} en tu navegador predeterminado...")
     webbrowser.open(url)
 
-# -------------------------------
-# INICIO DEL SERVIDOR
-# -------------------------------
+
 def iniciar_servidor():
     try:
         with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
@@ -45,7 +38,7 @@ def iniciar_servidor():
             print(f"[📁] Directorio raíz: {DIRECTORIO}")
             print("[💡] Presiona Ctrl + C para detener el servidor.\n")
 
-            # Abre el navegador en un hilo aparte
+            
             threading.Thread(target=abrir_navegador, daemon=True).start()
 
             httpd.serve_forever()
@@ -56,8 +49,5 @@ def iniciar_servidor():
     finally:
         print("[👋] Hasta luego!")
 
-# -------------------------------
-# EJECUCIÓN
-# -------------------------------
 if __name__ == "__main__":
     iniciar_servidor()
